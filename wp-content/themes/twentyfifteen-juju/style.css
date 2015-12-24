@@ -2,9 +2,9 @@
 Theme Name: Twenty Fifteen
 Theme URI: https://wordpress.org/themes/twentyfifteen/
 Author: the WordPress team
-Author URI: https://wordpress.org/
+Author URI: Juliano Moreira (http://www.julianomoreira.com)
 Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
-Version: 1.4
+Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -1319,8 +1319,12 @@ img.aligncenter {
 	font-size: 1.2rem;
 	font-weight: 400;
 	line-height: 1.5;
-	margin: 0.5em 0 0;
+	margin: 1em 0 0;
+	padding: 1em 0 0 0;
 	opacity: 0.7;
+	border-top: 1px solid #dedede;
+	text-transform: uppercase;
+	letter-spacing: -1px;
 }
 
 
