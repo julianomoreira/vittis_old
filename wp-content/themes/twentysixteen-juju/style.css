@@ -3965,3 +3965,9 @@ body {
 .bio img {
 	border-bottom: 5px solid #7C7F33;
 }
+
+/* Blog body */
+
+.entry-content p, .entry-content ul li {
+	color: #333;
+}
