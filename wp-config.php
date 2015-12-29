@@ -20,15 +20,18 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'vittis');
+define('DB_NAME', 'vittis-blog');
 
-/** MySQL database username */
+/** MySQL database username
+define('DB_USER', 'laisemoreira'); */
 define('DB_USER', 'root');
 
-/** MySQL database password */
+/** MySQL database password
+define('DB_PASSWORD', 'LalaJuju'); */
 define('DB_PASSWORD', 'root');
 
-/** MySQL hostname */
+/** MySQL hostname
+define('DB_HOST', '70.32.80.83'); */
 define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
