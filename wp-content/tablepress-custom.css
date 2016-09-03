@@ -1,0 +1,9 @@
+.tablepress .row-2,
+.tablepress .row-4,
+.tablepress .row-7,
+.tablepress .row-9,
+.tablepress .row-11,
+ {
+	background-color: #252E49;
+	color: #fff;
+}

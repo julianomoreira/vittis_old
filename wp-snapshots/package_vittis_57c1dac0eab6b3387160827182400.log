@@ -1,0 +1,75 @@
+********************************************************************************
+PACKAGE-LOG: 2016-08-27 18:25:08
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.1.16
+WORDPRESS:	4.4.4
+PHP INFO:	5.4.13 | SAPI: cgi-fcgi
+SERVER:		Apache 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 2048M (128M default) 
+MEMORY STACK: 35.5MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported 
+TABLES: total:18 | filtered:0 | create:18 
+FILTERED: [] 
+SQL CREATED: package_vittis_57c1dac0eab6b3387160827182400_database.sql 
+SQL FILE SIZE: 3.31MB (3475541) 
+SQL FILE TIME: 2016-08-27 18:25:08 
+SQL RUNTIME: 0.31 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /var/www/vhosts/vittis.com.br/httpdocs 
+ARCHIVE FILE: package_vittis_57c1dac0eab6b3387160827182400_archive.zip 
+FILTERS: *OFF* 
+DIRS:  not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	126.58MB 
+STATS:	Dirs 429 | Files 3,662 
+SQL ADDED: package_vittis_57c1dac0eab6b3387160827182400_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 4091
+    [filename] => /var/www/vhosts/vittis.com.br/httpdocs/wp-snapshots/tmp/package_vittis_57c1dac0eab6b3387160827182400_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 92.5MB 
+ARCHIVE RUNTIME: 19.32 sec. 
+MEMORY STACK: 38.25MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+Template parsed with new data 
+Complete [/var/www/vhosts/vittis.com.br/httpdocs/wp-snapshots/tmp/package_vittis_57c1dac0eab6b3387160827182400_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 3.31MB 
+Installer File: 347.6KB 
+Archive File: 92.5MB  
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 20.26 sec.
+PEAK PHP MEMORY USED: 40.25MB
+DONE PROCESSING => package_vittis 2016-08-27 18:25:28
+ 
