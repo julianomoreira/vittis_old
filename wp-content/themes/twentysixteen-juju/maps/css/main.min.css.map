@@ -1,1 +1,0 @@
-{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA,KAAK,qBAAA,AAAY,oBAAZ,AAAY,YAAA,CAAC,OAAO,qBAAqB,CAAC","file":"css/main.min.css","sourcesContent":["body{display:flex}body p{border:10px solid red}\n"],"sourceRoot":"/source/"}

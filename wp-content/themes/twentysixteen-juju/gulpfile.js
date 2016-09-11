@@ -9,6 +9,8 @@ var path = require('path');
 var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var plugins = require('gulp-load-plugins')();
+var livereload = require('gulp-livereload');
+
 
 // CONFIG STUFF
 var pkg = require('./package.json');
@@ -26,20 +28,35 @@ var sassConfig = {
     outputStyle: 'expanded',
     includePaths: [
       path.resolve(path.resolve(paths.src,'css'))
-      //path.resolve(path.resolve(paths.dist, 'css'))
     ],
+    errLogToConsole: true,
+    outFile: './maps',
     precision: 8
   },
   compressed: {
     outputStyle: 'compressed',
     includePaths: [
       path.resolve(path.resolve(paths.src,'css'))
-      //path.resolve(path.resolve(paths.dist, 'css'))
     ],
+    errLogToConsole: true,
+    outFile: './maps',
     precision: 8
   }
 };
 
+
+// Gulp rename config
+var renameConf = {
+    cssFile: {
+      basename: "style",
+      extname: ".css"
+    },
+    mapFile: {
+      basename: "style",
+      suffix: ".css",
+      extname: ".map"
+    }
+}
 //var cssDestinPath = path.resolve(paths.dist.css,'css');
 
 // Sass task
@@ -48,17 +65,31 @@ autoprefixer = require('gulp-autoprefixer'),
 sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('styles:compressed', function () {
-  console.log(path.resolve('src','css','*.scss'));
-  console.log(path.resolve(paths.dist,'css'));
+  //console.log(path.resolve('src','css','*.scss'));
  return gulp
-  .src(path.resolve(paths.src,'css','**/*.scss'))
+  .src(path.resolve(paths.src,'css','*.scss'))
   .pipe(sourcemaps.init())
   .pipe(sass(sassConfig.compressed).on('error', sass.logError))
   .pipe(autoprefixer(autoprefixerConfig))
-  .pipe(plugins.rename({suffix: '.min'}))
-  .pipe(gulp.dest(path.resolve(paths.dist, 'css')))
-  .pipe(sourcemaps.write('./maps'))
-  .pipe(plugins.notify({message: 'Styles are complete'}));
+  .pipe(plugins.cssmin({keepSpecialComments: '1'}))
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest(path.resolve('./')))
+  .pipe(plugins.notify({message: 'Styles are complete'}))
+  .pipe(livereload());
+});
+
+gulp.task('styles:renameCSSFile', function(){
+  return gulp
+    .src(['main.css'])
+    .pipe(plugins.rename(renameConf.cssFile))
+    .pipe(gulp.dest(path.resolve('./')));
+});
+
+gulp.task('styles:renameMapFile', function(){
+  return gulp
+    .src(['main.css.map'])
+    .pipe(plugins.rename(renameConf.mapFile))
+    .pipe(gulp.dest(path.resolve('./')));
 });
 
 gulp.task('styles:expanded', function () {
@@ -84,10 +115,23 @@ gulp.task('copy:normalize', function () {
 
 // Watch
 gulp.task('watch', function() {
-  console.log(path.resolve(paths.src,'css'));
+  //console.log(path.resolve(paths.src,'css'));
+
+  // Create LiveReload server
+  livereload.listen();
+
+  // Watch any files in dist/, reload on change
+  gulp.watch( './**/*.php' ).on( 'change', function( file ) {
+    // reload browser whenever any PHP file changes
+    livereload.changed( file );
+  } );
+
   // Watch .scss files
   gulp.watch(path.resolve(paths.src,'css','**/*.scss'), ['styles:expanded']);
   gulp.watch(path.resolve(paths.src,'css','**/*.scss'), ['styles:compressed']);
+  //gulp.watch(path.resolve('.','**/*.map'), ['styles:renameMapFile']);
+
+
 
   // Watch .js files
   //gulp.watch('src/scripts/**/*.js', ['scripts']);
