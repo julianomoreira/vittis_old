@@ -115,7 +115,7 @@ gulp.task('copy:normalize', function () {
 
 // Watch
 gulp.task('watch', function() {
-  //console.log(path.resolve(paths.src,'css'));
+  // console.log(path.resolve(paths.src,'css'));
 
   // Create LiveReload server
   livereload.listen();

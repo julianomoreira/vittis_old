@@ -1,7 +1,158 @@
 /*
+  Toggle button
+*/
+
+.menu-button-container {
+  flex: 2 0 0;
+}
+.menu-toggle {
+	background-color: transparent;
+	border: 1px solid #d1d1d1;
+	color: #252E49;
+	font-size: 16px;
+  float: right;
+	// margin: 1.076923077em 0;
+	// padding: 0.769230769em;
+}
+
+.no-js .menu-toggle {
+	display: none;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	background-color: transparent;
+	border-color: #007acc;
+	color: #007acc;
+}
+
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus {
+	background-color: #252E49;
+	border-color: #252E49;
+	color: #fff;
+}
+
+.menu-toggle:focus {
+	outline: 0;
+}
+
+.menu-toggle.toggled-on:focus {
+	outline: thin dotted;
+}
+
+/*
   Main nav
 */
 
+
+/**
+ * 6.2 - Menus
+ */
+
 .site-header-menu {
-	border: 1px solid #333;  
+  display: none;
+  // flex: 2 0 0;
+  @media screen and (min-width: 44.375em) {
+    //flex: 0 1 auto;
+  	margin: 0.875em 0;
+  }
+  @media screen and (min-width: 56.875em) {
+    display: block;
+    position: static;
+  }
 }
+.primary-menu {
+  position: absolute;
+  top: 84px;
+  right: 13px;
+  z-index: 100;
+}
+.primary-menu li {
+  list-style: none;
+  a {
+    display: block;
+    padding: 1em 1em;
+    border-bottom: 1px solid rgba(255,255,255,.35);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// font-family: Montserrat, "Helvetica Neue", sans-serif;
+.site-header-menu.toggled-on,
+.no-js .site-header-menu {
+	display: block;
+}
+
+.site-footer .main-navigation {
+	margin-bottom: 1.75em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// .main-navigation a {
+// 	color: #252E49;
+// 	display: block;
+// 	line-height: 1.3125;
+// 	outline-offset: -1px;
+// 	padding: 0.84375em 0;
+// }
+
+// .main-navigation a:hover,
+// .main-navigation a:focus {
+// 	color: #007acc;
+// }
+//
+// .main-navigation .current-menu-item > a,
+// .main-navigation .current-menu-ancestor > a {
+// 	font-weight: 700;
+// }
+//
+// .main-navigation ul ul {
+// 	//display: none;
+// 	margin-left: 0.875em;
+// }
+//
+// .no-js .main-navigation ul ul {
+// 	display: block;
+// }
+//
+// .main-navigation ul .toggled-on {
+// 	display: block;
+// }
+//
+// .main-navigation .primary-menu {
+// 	border-bottom: 1px solid #d1d1d1;
+// }
+//
+// .main-navigation .menu-item-has-children > a {
+// 	margin-right: 56px;
+// }
