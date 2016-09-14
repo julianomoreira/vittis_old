@@ -352,6 +352,10 @@ Colors
   background-color: #252E49;
 }
 
+.primary-menu li:hover {
+  background-color: #7C7F33;
+}
+
 .primary-menu li a {
   display: block;
   color: #fff;
@@ -366,6 +370,10 @@ Colors
             flex-direction: row;
     border-radius: 4px;
   }
+}
+
+.current_page_item {
+  background-color: #7C7F33 !important;
 }
 
 .site-header-menu.toggled-on,
@@ -1569,7 +1577,7 @@ blockquote:after,
   font-family: Montserrat, "Helvetica Neue", sans-serif;
   font-size: 28px;
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.25;
   margin-bottom: 1em;
 }
@@ -2655,7 +2663,7 @@ p > video {
   }
   .entry-title {
     font-size: 33px;
-    font-size: 2.0625rem;
+    font-size: 2.625rem;
     line-height: 1.2727272727;
     margin-bottom: 0.8484848485em;
   }
@@ -3515,6 +3523,7 @@ p > video {
 /* Blog body */
 .entry-content p, .entry-content ul li {
   color: #333;
+  font-weight: 300;
 }
 
 /* Mailchimo */
