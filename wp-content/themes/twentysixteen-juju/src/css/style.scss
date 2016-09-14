@@ -50,207 +50,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 15.0 - Print
  */
 
-
-/**
- * 1.0 - Normalize
- *
- * Normalizing styles have been helped along thanks to the fine work of
- * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
- */
-
-html {
-	font-family: sans-serif;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-}
-
-body {
-	margin: 0;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-	display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-	vertical-align: baseline;
-}
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
-
-[hidden],
-template {
-	display: none;
-}
-
-a {
-	background-color: transparent;
-}
-
-abbr[title] {
-	border-bottom: 1px dotted;
-}
-
-b,
-strong {
-	font-weight: 700;
-}
-
-small {
-	font-size: 80%;
-}
-
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	top: -0.5em;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
-img {
-	border: 0;
-}
-
-svg:not(:root) {
-	overflow: hidden;
-}
-
-figure {
-	margin: 0;
-}
-
-hr {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-}
-
-code,
-kbd,
-pre,
-samp {
-	font-size: 1em;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	color: inherit;
-	font: inherit;
-	margin: 0;
-}
-
-select {
-	text-transform: none;
-}
-
-button {
-	overflow: visible;
-}
-
-button,
-input,
-select,
-textarea {
-	max-width: 100%;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
-}
-
-button[disabled],
-html input[disabled] {
-	cursor: default;
-	opacity: .5;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin-right: 0.4375em;
-	padding: 0;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-input[type="search"] {
-	-webkit-appearance: textfield;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-fieldset {
-	border: 1px solid #d1d1d1;
-	margin: 0 0 1.75em;
-	padding: 0.875em;
-}
-
-fieldset > :last-child {
-	margin-bottom: 0;
-}
-
-legend {
-	border: 0;
-	padding: 0;
-}
-
-textarea {
-	overflow: auto;
-	vertical-align: top;
-}
-
-optgroup {
-	font-weight: bold;
-}
-
+ /**
+  * 1.0 - Modules
+  *
+  * Normalizing styles have been helped along thanks to the fine work of
+  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+  */
+@import 'modules/normalize';
+ @import 'modules/variables';
+ @import 'modules/nav';
 
 /**
  * 2.0 - Genericons
@@ -293,7 +101,7 @@ input,
 select,
 textarea {
 	color: #252E49;
-	font-family: Merriweather, Georgia, serif;
+	font-family: $montserrat;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
@@ -448,11 +256,6 @@ html {
 	-webkit-box-sizing: inherit;
 	-moz-box-sizing: inherit;
 	box-sizing: inherit;
-}
-
-body {
-	// background: #252E49;
-	/* Fallback for when there is no custom background color defined. */
 }
 
 hr {
@@ -803,10 +606,6 @@ a:active {
 
 .dropdown-toggle.toggled-on:after {
 	content: "\f432";
-}
-
-.site-header .main-navigation + .social-navigation {
-	margin-top: 1.75em;
 }
 
 .site-footer .social-navigation {
@@ -2544,10 +2343,6 @@ p > video {
 		bottom: 0;
 	}
 
-	// .site {
-	// 	margin: 21px;
-	// }
-
 	.site-main {
 		margin-bottom: 5.25em;
 	}
@@ -2721,134 +2516,6 @@ p > video {
  */
 
 @media screen and (min-width: 56.875em) {
-	.site-header {
-		padding-right: 4.5455%;
-		padding-left: 4.5455%;
-	}
-
-	.site-header-main {
-		-webkit-align-items: flex-start;
-		-ms-flex-align: start;
-		align-items: flex-start;
-	}
-
-	.site-header-menu {
-		display: block;
-		-webkit-flex: 0 1 auto;
-		-ms-flex: 0 1 auto;
-		flex: 0 1 auto;
-	}
-
-	.main-navigation {
-		margin: 0 -0.875em;
-	}
-
-	.main-navigation .primary-menu,
-	.main-navigation .primary-menu > li {
-		border: 0;
-	}
-
-	.main-navigation .primary-menu > li {
-		float: left;
-	}
-
-	.main-navigation a {
-		outline-offset: -8px;
-		padding: 0.65625em 0.875em;
-		white-space: nowrap;
-	}
-
-	.main-navigation li:hover > a,
-	.main-navigation li.focus > a {
-		color: #007acc;
-	}
-
-	.main-navigation ul ul {
-		border-bottom: 1px solid #d1d1d1;
-		display: block;
-		left: -999em;
-		margin: 0;
-		position: absolute;
-		z-index: 99999;
-	}
-
-	.main-navigation ul ul ul {
-		top: -1px;
-	}
-
-	.main-navigation ul ul ul:before,
-	.main-navigation ul ul ul:after {
-		border: 0;
-	}
-
-	.main-navigation ul ul li {
-		background-color: #fff;
-		border: 1px solid #d1d1d1;
-		border-bottom-width: 0;
-	}
-
-	.main-navigation ul ul a {
-		white-space: normal;
-		width: 12.6875em;
-	}
-
-	.main-navigation ul ul:before,
-	.main-navigation ul ul:after {
-		border-style: solid;
-		content: "";
-		position: absolute;
-	}
-
-	.main-navigation ul ul:before {
-		border-color: #d1d1d1 transparent;
-		border-width: 0 10px 10px;
-		right: 9px;
-		top: -9px;
-	}
-
-	.main-navigation ul ul:after {
-		border-color: #fff transparent;
-		border-width: 0 8px 8px;
-		right: 11px;
-		top: -7px;
-	}
-
-	.main-navigation li:hover > ul,
-	.main-navigation li.focus > ul {
-		left: auto;
-		right: 0;
-	}
-
-	.main-navigation ul ul li:hover > ul,
-	.main-navigation ul ul li.focus > ul {
-		left: auto;
-		right: 100%;
-	}
-
-	.main-navigation .menu-item-has-children > a {
-		margin: 0;
-		padding-right: 2.25em;
-	}
-
-	.main-navigation .menu-item-has-children > a:after {
-		content: "\f431";
-		position: absolute;
-		right: 0.625em;
-		top: 0.8125em;
-	}
-
-	.main-navigation ul ul .menu-item-has-children > a {
-		padding-right: 2.0625em;
-	}
-
-	.main-navigation ul ul .menu-item-has-children > a:after {
-		right: 0.5625em;
-		top: 0.875em;
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		transform: rotate(90deg);
-	}
 
 	.dropdown-toggle,
 	.main-navigation ul .dropdown-toggle.toggled-on,
@@ -3149,10 +2816,6 @@ p > video {
 @media screen and (min-width: 61.5625em) {
 	.site-main {
 		margin-bottom: 7.0em;
-	}
-
-	.site-header {
-		padding: 5.25em 4.5455%;
 	}
 
 	.image-navigation {
@@ -3669,10 +3332,6 @@ p > video {
 		max-width: none;
 	}
 
-	.site-header {
-		padding: 0 0 1.75em;
-	}
-
 	.site-branding {
 		margin-top: 0;
 		margin-bottom: 1.75em;
@@ -3732,22 +3391,6 @@ body {
 	text-transform: uppercase;
 }
 
-.main-navigation .primary-menu {
-
-}
-.main-navigation .primary-menu .menu-item {
-	background-color: #252E49;
-	margin: 0 1em 0 0;
-}
-.main-navigation .primary-menu .menu-item a {
-	color: #fff;
-}
-.main-navigation .primary-menu .menu-item a:hover {
-	background-color: #7C7F33;
-}
-.main-navigation .current-menu-item, .main-navigation .current-menu-ancestor {
-	background-color: #7C7F33!important;
-}
 .entry-title a {
 	color: #7C7F33;
 }
@@ -3840,12 +3483,8 @@ body {
 	text-decoration: none;
 }
 
-/* overidden styles and import */
-
-@import 'modules/nav';
-
 body {
-	border-top: 6px solid #d3d3d3;
+	border-top: 6px solid #707D90;
 }
 .site {
 	padding-top: 40px;
@@ -3869,6 +3508,7 @@ body {
 	display: flex;
 	max-width: 1200px;
 	margin: 0 auto;
+	position: relative;
 }
 .site-branding {
 	width: 160px;

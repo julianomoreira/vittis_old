@@ -232,6 +232,10 @@ function twentysixteen_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'twentysixteen-fonts', twentysixteen_fonts_url(), array(), null );
 
+	// Load bootstrap specific stylesheet.
+	// wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array( 'twentysixteen-style' ), '20160913' );
+	// wp_style_add_data( 'twentysixteen-ie', 'conditional', 'lt IE 10' );
+
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
 
