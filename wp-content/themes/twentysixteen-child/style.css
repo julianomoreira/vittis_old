@@ -1,0 +1,66 @@
+/* 
+Theme Name: Twenty Sixteen Child 
+Theme URL: http://www.vittis.com.br
+Description: Twenty Sixteen Child 
+Theme Author: Your Name
+Author URL: http://yourdomain.com
+Template: twentysixteen
+Version: 1.0.0 
+Text Domain: twentysixteen-child 
+*/
+
+body {
+    background-color: #7C7F33;
+    color: #333;
+}
+body:not(.custom-background-image)::before {
+    height: 14px;
+}
+body:not(.custom-background-image)::after {
+    height: 0;
+}
+.site {
+    margin: 0;
+}
+.site-description {
+	margin: 1em 0 0;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	padding: 1em 0 1em;
+	text-transform: uppercase;
+}
+/* bio widget */
+
+.bio {
+	border: none;
+}
+.bio img {
+	border-bottom: 5px solid #7C7F33;
+}
+
+.main-navigation .primary-menu .menu-item {
+	background-color: #252E49;
+	margin: 0 1em 0 0;
+}
+.main-navigation .primary-menu .menu-item a {
+	color: #fff;
+}
+.main-navigation .primary-menu .menu-item a:hover {
+	background-color: #7C7F33;
+}
+.main-navigation .current-menu-item, .main-navigation .current-menu-ancestor {
+	background-color: #7C7F33!important;
+}
+
+/**
+ * Posts and pages
+ */
+
+.entry-title a {
+	color: #7C7F33;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+	color: #007acc;
+}
