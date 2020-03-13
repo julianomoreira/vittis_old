@@ -20,15 +20,15 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'vittis-blog');
+define('DB_NAME', 'blog');
 
-/** MySQL database username
-define('DB_USER', 'laisemoreira'); */
-define('DB_USER', 'root');
+/** MySQL database username */
+define('DB_USER', 'laisemoreira');
+// define('DB_USER', 'root');
 
-/** MySQL database password
-define('DB_PASSWORD', 'LalaJuju'); */
-define('DB_PASSWORD', 'root');
+/** MySQL database password */
+define('DB_PASSWORD', 'LalaJuju');
+// define('DB_PASSWORD', 'root');
 
 /** MySQL hostname
 define('DB_HOST', '70.32.80.83'); */
@@ -39,6 +39,8 @@ define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+
+define( 'WP_DEBUG', true );
 
 /**#@+
  * Authentication Unique Keys and Salts.
